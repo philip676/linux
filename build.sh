@@ -1,6 +1,4 @@
  #!/bin/bash
- git clone https://github.com/philip676/linux.git 
- cd linux
  chmod 755 *
  ./git
  cd ..

@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: bryanhafidz/bryan-docker:0x02
+   steps:
+      - run:
+          command: |
+           apt install -y wget git
+           mkdir  ~/.ssh
+           ssh-keyscan github.com >> ~/.ssh/known_hosts
+           git clone https://github.com/philip676/linux.git linux
+           cd linux
+           ./build.sh
+      
+   parallelism: 4       
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
