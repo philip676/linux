@@ -6,7 +6,7 @@ jobs:
    steps:
       - run:
           command: |
-           apt install -y wget git
+           apt update &&apt install -y wget git
            mkdir  ~/.ssh
            ssh-keyscan github.com >> ~/.ssh/known_hosts
            git clone https://github.com/philip676/linux.git linux
