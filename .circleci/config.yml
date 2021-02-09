@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: bryanhafidz/bryan-docker:0x02
+      - image: ubuntu:20.10
    steps:
       - run:
           command: |
